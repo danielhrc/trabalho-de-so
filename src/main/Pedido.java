@@ -39,7 +39,7 @@ public class Pedido {
 
     public Integer getNumPacotes() {
 
-        return (250 * numPacotes <= 5000) ? 1 : ((250 * numPacotes)/5000)+1;
+        return (250 * totalProdutos <= 5000) ? 1 : ((250 * totalProdutos)/5000)+1;
     }
 
     public void setNumPacotes(Integer numPacotes) {
