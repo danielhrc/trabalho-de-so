@@ -16,15 +16,8 @@ public class Tests {
         assertEquals("James Sandero",pedidoList.get(0).getPessoa());
         assertEquals("Jon Sanfdero", pedidoList.get(1).getPessoa());
         assertEquals(5, pedidoList.size());
-
     }
 
-    @Test
-    public void criaPedidoTest(){
-
-
-
-    }
 
     @Test
     public void esteiraTest(){
