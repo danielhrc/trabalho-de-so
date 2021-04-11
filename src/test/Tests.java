@@ -1,11 +1,44 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import java.io.IOException;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class Tests {
 
     @Test
-    public void politicaTest() {
-        assertEquals(new Object(), new Object());
+    public void ioTest() throws IOException {
+        LeitorArquivo leitorArquivo = new LeitorArquivo();
+        leitorArquivo.lerArquivo("/Users/daniel/repos/trabalho-de-so/docs/test.txt");
+        List<Pedido> pedidoList =  leitorArquivo.getPedidoList();
+
+        assertEquals("James Sandero",pedidoList.get(0).getPessoa());
+        assertEquals("Jon Sanfdero", pedidoList.get(1).getPessoa());
+        assertEquals(5, pedidoList.size());
+
     }
+
+    @Test
+    public void criaPedidoTest(){
+
+
+
+    }
+
+    @Test
+    public void esteiraTest(){
+
+    }
+
+
+    @Test
+    public void checaPrioridadePedido(){
+
+    }
+
+
+
+
+
 }
