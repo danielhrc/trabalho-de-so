@@ -39,10 +39,7 @@ public class Tests {
         horario.addTempo(0.5);
         assertEquals(5.5, horario.getTempo(), 0.1);
 
-        Esteira esteira = new Esteira();
-        esteira.setTempoGeral(0);
 
-        esteira.addTempoGeral(esteira.getTempoBraco());
 
      //testar o tempo de empacotamento de cada produto
 
@@ -53,7 +50,6 @@ public class Tests {
 
 
     @Test
-<<<<<<< Updated upstream
     public void checaPrioridadePedido() throws IOException {
         LeitorArquivo leitorArquivo = new LeitorArquivo();
         leitorArquivo.lerArquivo("src/docs/SO_20_DadosEmpacotadeira1.txt");
@@ -125,19 +121,10 @@ public class Tests {
         });
 
 
-=======
-    public void checaPrioridadePedidoTest(){
-         Pedido[] vetor=new Pedido[3];
-         Pedido pessoa=new Pedido("James Sandero",10,5);
-         for(int i=0;i< vetor.length;i++){
-             int aux=0;
-             if(pessoa.getPrazo()<aux){
-                  aux=pessoa.getPrazo();
-             }
-         }
+
      //testar o produto com o menor prazo
         //testar o vetor auxiliar para reordenação(produto com menor prazo na frente do vetor)
->>>>>>> Stashed changes
+
 
     }
 

@@ -69,13 +69,15 @@ public class Main {
                 }
 
             });
+            System.out.println(" ---------------------------------------------" );
+            System.out.println("Prioridade: " + prioridade + " min ");
             System.out.println("Soma pacotes> " + somaPacotes);
 
             if (resto.get()>0){
                 somaPacotes.set(somaPacotes.get() + 5.5);
             }
-//            System.out.println(horarios.get(horarios.size()-1).getTempo());
-            System.out.println(somaHorarios);
+           System.out.println("Horario por prazo: " + horarios.get(horarios.size()-1).getTempo() + " s ");
+            System.out.println("Tempo gasto: " + somaHorarios + " s ");
 
 
         });
