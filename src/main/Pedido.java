@@ -3,7 +3,7 @@ public class Pedido {
     private Integer totalProdutos;
     private String pessoa;
     private Integer prazo;
-    private Integer numPacotes;
+    private Integer restante;
 
 
     public Pedido(String pessoa, Integer totalProdutos, Integer prazo ){
@@ -37,12 +37,11 @@ public class Pedido {
         this.prazo = prazo;
     }
 
-    public Integer getNumPacotes() {
-
-        return (250 * totalProdutos <= 5000) ? 1 : ((250 * totalProdutos)/5000)+1;
+    public Integer getRestante( ) {
+        return restante;
     }
 
-    public void setNumPacotes(Integer numPacotes) {
-        this.numPacotes = numPacotes;
+    public void setRestante(Integer restante) {
+        this.restante = restante;
     }
 }

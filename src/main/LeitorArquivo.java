@@ -4,6 +4,7 @@ import java.util.List;
 
 public class LeitorArquivo {
 
+    private Integer quantidade;
     private List<Pedido> pedidoList = new ArrayList<>();
 
     public LeitorArquivo(){};
@@ -17,7 +18,7 @@ public class LeitorArquivo {
         ) {
 
             String linha = arquivoBuff.readLine();
-            Integer quantidade = Integer.parseInt(linha);
+            this.setQuantidade(Integer.parseInt(linha));
             linha = arquivoBuff.readLine();
 
            while ( linha != null && !linha.isEmpty()){
@@ -26,7 +27,6 @@ public class LeitorArquivo {
 
                addPedidoList(fromArquivoLnToPedidosList);
                linha = arquivoBuff.readLine();
-               System.out.println(linha);
 
            }
 
@@ -53,5 +53,13 @@ public class LeitorArquivo {
 
 
 
+    }
+
+    public Integer getQuantidade(){
+        return this.quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 }
