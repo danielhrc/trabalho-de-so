@@ -15,9 +15,9 @@ public class Main {
         pedidoList = prioridadeChecker.transformZeroToTenThousand(pedidoList);
         pedidoList = prioridadeChecker.orderByPrazo(pedidoList);
 
-        // Vetor de prazos
+
         List<Integer> vetorPrioridades = new ArrayList<>();
-        // Lê prioridades formando vetor
+
         pedidoList.forEach(pedido -> {
             if (!vetorPrioridades.contains(pedido.getPrazo())){
                 vetorPrioridades.add(pedido.getPrazo());
@@ -30,10 +30,10 @@ public class Main {
         AtomicReference<Double> resto = new AtomicReference<>((double) 0);
         AtomicReference<Boolean> primeiraRemessa = new AtomicReference<>((boolean) true);
 
-        // Vetor com horarios por prioridade
+
         List<Horario> horarios = new ArrayList<>();
 
-        // navegar lista pedidos
+
         List<Pedido> finalPedidoList = pedidoList;
         vetorPrioridades.forEach(prioridade -> {
             horarios.add(new Horario());
@@ -55,7 +55,9 @@ public class Main {
                     if(somaHorarios.get() >= 7200 && primeiraRemessa.get()){
                         primeiraRemessa.set(false);
                         if(somaHorarios.get() > 7200){
+
                             resto.set(resto.get() + ((somaHorarios.get() - 7200)/5.5 ));
+                            somaPacotes.set(somaPacotes.get()-resto.get());
                         }
 
                         System.out.println("Primeira remessa: foram feitas " + somaPacotes);
